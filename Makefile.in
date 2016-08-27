@@ -1,0 +1,3 @@
+TIME = /usr/bin/time -f "\n\`\`\`\n\n| Command | Wall Clock (s) | Max Mem (Kb) |\n|:---|---:|---:|\n| %C | %e | %M |"
+
+.SILENT :
