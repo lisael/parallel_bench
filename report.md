@@ -14,7 +14,7 @@ go1.6.3 linux/amd64
 
 | Command | Wall Clock (s) | Max Mem (Kb) |
 |:---|---:|---:|
-| go build montecarlo | 0.34 | 42196 |
+| go build montecarlo | 0.54 | 42780 |
 
 #### Executable size
 
@@ -23,13 +23,13 @@ go1.6.3 linux/amd64
 #### Run
 
 ```
-3.1416513999999998
+3.14187056
 
 ```
 
 | Command | Wall Clock (s) | Max Mem (Kb) |
 |:---|---:|---:|
-| ./montecarlo | 1.44 | 2076 |
+| ./montecarlo | 1.48 | 2068 |
 
 ## Pony
 
@@ -37,17 +37,17 @@ go1.6.3 linux/amd64
 
 #### Version
 
-0.2.1-1068-g4ec8b31 [debug]
+0.3.0-5-gb2cdd03 [release]
 
 #### Build
 
 ```
-Building builtin -> /usr/local/lib/pony/0.2.1-1068-g4ec8b31/packages/builtin
+Building builtin -> /usr/local/lib/pony/0.3.0-5-gb2cdd03/packages/builtin
 Building montecarlo -> /home/bdupuis/projects/perso/parallel_bench/pony/montecarlo
-Building time -> /usr/local/lib/pony/0.2.1-1068-g4ec8b31/packages/time
-Building ponytest -> /usr/local/lib/pony/0.2.1-1068-g4ec8b31/packages/ponytest
-Building collections -> /usr/local/lib/pony/0.2.1-1068-g4ec8b31/packages/collections
-Building random -> /usr/local/lib/pony/0.2.1-1068-g4ec8b31/packages/random
+Building time -> /usr/local/lib/pony/0.3.0-5-gb2cdd03/packages/time
+Building ponytest -> /usr/local/lib/pony/0.3.0-5-gb2cdd03/packages/ponytest
+Building collections -> /usr/local/lib/pony/0.3.0-5-gb2cdd03/packages/collections
+Building random -> /usr/local/lib/pony/0.3.0-5-gb2cdd03/packages/random
 Generating
  Reachability
  Selector painting
@@ -64,22 +64,22 @@ Linking build/montecarlo
 
 | Command | Wall Clock (s) | Max Mem (Kb) |
 |:---|---:|---:|
-| ponyc -o build montecarlo | 2.82 | 228260 |
+| ponyc -o build montecarlo | 1.70 | 228992 |
 
 #### Executable size
 
-296
+140
 
 #### Run
 
 ```
-3.14166
+3.14164
 
 ```
 
 | Command | Wall Clock (s) | Max Mem (Kb) |
 |:---|---:|---:|
-| build/montecarlo | 0.67 | 2588 |
+| build/montecarlo | 0.60 | 2560 |
 
 ## Elixir
 
@@ -108,7 +108,7 @@ Generated escript montecarlo with MIX_ENV=prod
 
 | Command | Wall Clock (s) | Max Mem (Kb) |
 |:---|---:|---:|
-| mix escript.build | 0.90 | 63004 |
+| mix escript.build | 1.00 | 64988 |
 
 #### Executable size
 
@@ -117,11 +117,48 @@ Generated escript montecarlo with MIX_ENV=prod
 #### Run
 
 ```
-3.14149904
+3.14163308
 
 ```
 
 | Command | Wall Clock (s) | Max Mem (Kb) |
 |:---|---:|---:|
-| montecarlo/montecarlo | 26.14 | 25444 |
+| montecarlo/montecarlo | 25.82 | 25520 |
+
+## Rust
+
+### montecarlo
+
+#### Version
+
+rustc 1.11.0 (9b21dcd6a 2016-08-15)
+
+#### Build
+
+    Updating registry `https://github.com/rust-lang/crates.io-index`
+```
+   Compiling libc v0.2.15
+   Compiling rand v0.3.14
+   Compiling montecarlo v0.1.0 (file:///home/bdupuis/projects/perso/parallel_bench/rust/montecarlo)
+
+```
+
+| Command | Wall Clock (s) | Max Mem (Kb) |
+|:---|---:|---:|
+| cargo build --release | 6.47 | 143624 |
+
+#### Executable size
+
+756
+
+#### Run
+
+```
+3.14155344
+
+```
+
+| Command | Wall Clock (s) | Max Mem (Kb) |
+|:---|---:|---:|
+| montecarlo/target/release/montecarlo | 0.34 | 2712 |
 
